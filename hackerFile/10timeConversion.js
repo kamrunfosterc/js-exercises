@@ -41,8 +41,8 @@ function timeConversion(s){
     //step 2 conditions
     if (nightAndDay === "PM" && parseInt(splitTime[0]) < 12){
         updatedHour = parseInt(splitTime[0]) + 12;//adds 12 to any number where PM is part of time
-        // splitTime.shift();//console.log("shift: "+splitTime.shift());
-        // splitTime.unshift(updatedHour.toString());//console.log("unshift & toString: "+splitTime.unshift(updatedHour.toString()));
+        splitTime.shift();//console.log("shift: "+splitTime.shift());
+        splitTime.unshift(updatedHour.toString());//console.log("unshift & toString: "+splitTime.unshift(updatedHour.toString()));
         return splitTime.join(":");
     } else if(nightAndDay === "AM" && parseInt(splitTime[0]) === 12){
         updatedHour == "00";
