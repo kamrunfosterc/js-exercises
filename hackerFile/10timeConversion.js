@@ -29,7 +29,7 @@ function readLine() {
  * The function accepts STRING s as parameter.
  */
 
-// todo: function solved below
+// todo: function solved below (doesn't pass every scenario [3])
 // option 1 where s = "09:17:27 PM"
 function timeConversion(s){
     //step 1
@@ -62,8 +62,52 @@ function timeConversion(s){
     and returns the new length of the array :: unshift(element0, element1, ... , elementN)
  */
 
+// todo 2nd option (bugs)
+function timeConversionX(s){
+    s = s.split(':');// breaks input up
+    let hrs = parseInt(s[0]);
+    let timeFrame = s[2].slice(2);
+    let sec = s[2].slice(0,2);
+    if((timeFrame === 'PM') && (hrs !== 12)){
+        hrs += 12;
+    }
+    if((hrs === 12) && (timeFrame === 'AM')){
+        hrs = '00';
+    } else if (hrs <10){
+        hrs = '0'+hrs.toString();
+    } else {
+        hrs = hrs.toString();
+    }
+    console.log([hrs, s[1], sec].join(':'));
+}
 
-console.log(timeConversion('09:07:23 PM')); //returns mil-time
+// todo 3rd attempt google search for video on youtube This WORKS & understood
+function timeConverts(s){
+    let timeOfDay = s.charAt(8);// returns string value at position 8, or 7th character
+    let miltHr = "";// placeholder variable
+
+    if (timeOfDay == 'A'){// checks for 7th character equivalence
+        if (s.substring(0,2) == '12'){
+            //substring: checks for specified characters. start and just prior to, here it's 1st 2 #s
+            miltHr = '00';
+        } else {
+            miltHr = s.substring(0,2);
+        }
+    }//end of AM condition
+    else{
+        if (s.substring(0,2) == '12'){
+            miltHr = s.substring(0,2);
+        }else{
+            miltHr = parseInt(s.substring(0,2), 10)+12;
+        }
+    }
+    return miltHr + s.substring(2,8);// concats 1st 2 values and remaining string together
+}
+
+
+
+// console.log(timeConversion('09:07:23 PM')); //returns mil-time
+// console.log(timeConversionX('09:07:23 PM'));
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
