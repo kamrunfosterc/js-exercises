@@ -5,6 +5,18 @@ function onesAndTwos(a, b) {
 
 }
 
+// todo this is a test
+function factorial( n)
+{
+    let M = 1000000007;
+
+    let f = 1;
+    for (let i = 1; i <= n; i++)
+        f = (f*i) % M;  // Now f never can
+                        // exceed 10^9+7
+    return f;
+}
+
 // const fs = require('fs');
 //
 // process.stdin.resume();
