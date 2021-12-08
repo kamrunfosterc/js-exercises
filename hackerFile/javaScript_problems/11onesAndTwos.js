@@ -2,19 +2,33 @@
 
 function onesAndTwos(a, b) {
     // Write your code here
+    // need to check that value
 
 }
 
 // todo this is a test
-function factorial( n)
-{
-    let M = 1000000007;
+// function factorial( n)
+// {
+//     let M = 1000000007;
+//
+//     let f = 1;
+//     for (let i = 1; i <= n; i++)
+//         f = (f*i) % M;  // Now f never can
+//                         // exceed 10^9+7
+//     return f;
+// }
 
-    let f = 1;
-    for (let i = 1; i <= n; i++)
-        f = (f*i) % M;  // Now f never can
-                        // exceed 10^9+7
-    return f;
+function getUniqueValues(uniqueValueArray){
+    var uniqueArray = [];
+    //returns an with only the unique (non duplicated values) values from that array
+    for (let i = 0; i < uniqueValueArray.length; i++) {
+        if (uniqueArray.includes(uniqueValueArray[i])){
+            //includes() boolean returns if array includes certain values among entries
+            continue;
+        }
+        uniqueArray.push(uniqueValueArray[i])
+    }
+    return uniqueArray;
 }
 
 // const fs = require('fs');
