@@ -1,0 +1,97 @@
+/*1st grid layout*/
+
+/*todo Flexbox Cheat Sheet (Containers)*/
+/*main axis alignment*/
+
+/*can align flex content along main axis w/ justify-content property*/
+.containerA1 {
+    /*center all in row*/
+    display: flex;
+    justify-content: center;
+}
+
+.containerA2 {
+    /*move all to right/ end of row*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerA3 {
+    /*evenly puts space around all col in row space @end*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerA4 {
+    /*evenly puts space between each col no space @end of row*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/*todo cross axis alignment */
+
+/*can align flex content along cross axis w/ align-items property*/
+.containerB1 {
+    display: flex;
+    align-items: center;
+}
+
+.containerB2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.containerB3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*Perfect Center Alignment*/
+.containerB4 {
+    /*can combine selectors to get your desired layout. perfect centering
+    is a breeze with flexbox*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*todo content flow direction*/
+.containerC1 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.containerC2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerC3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+/*todo content wrapping*/
+/*by default all items will stay on single line*/
+.containerD1 {
+    display: flex;
+}
+/*you can make content wrap from top-to-bottom or bottom-to-top*/
+.containerD2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerD3 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+/*default behavior
+default behavior of flexbox will treat container as block
+(full width), lft align items and stretch each items height
+to fit the container*/
+.containerD4 {
+    display: flex;
+    flex-direction: column;
+}
