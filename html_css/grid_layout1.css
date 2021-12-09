@@ -32,16 +32,19 @@
 
 /*can align flex content along cross axis w/ align-items property*/
 .containerB1 {
+    /*centers col in row has items pushed left*/
     display: flex;
     align-items: center;
 }
 
 .containerB2 {
+    /*starts at top of col*/
     display: flex;
     align-items: flex-start;
 }
 
 .containerB3 {
+    /*starts at bottom of col*/
     display: flex;
     align-items: flex-end;
 }
@@ -56,17 +59,26 @@
 }
 
 /*todo content flow direction*/
+/*
+can chng overall content flow direction (col or row), and you
+can even chng arrangement of content. content flow will affect
+how other flex properties are applied. w/ col or col-reverse,
+the axes are swapped (see ex in this section)
+*/
 .containerC1 {
+    /*stretch height of row pushed to end of row*/
     display: flex;
     flex-direction: row-reverse;
 }
 
 .containerC2 {
+    /*stretches whole col length of row*/
     display: flex;
     flex-direction: column;
 }
 
 .containerC3 {
+    /*aligns col at center of row stacked bottom-to-top*/
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
@@ -75,10 +87,11 @@
 /*todo content wrapping*/
 /*by default all items will stay on single line*/
 .containerD1 {
+    /*layouts cols but not bound to row*/
     display: flex;
 }
-/*you can make content wrap from top-to-bottom or bottom-to-top*/
 .containerD2 {
+    /*you can make content wrap from top-to-bottom or bottom-to-top*/
     display: flex;
     flex-wrap: wrap;
 }
@@ -87,11 +100,12 @@
     display: flex;
     flex-wrap: wrap-reverse;
 }
-/*default behavior
+
+.containerD4 {
+    /*default behavior
 default behavior of flexbox will treat container as block
 (full width), lft align items and stretch each items height
 to fit the container*/
-.containerD4 {
     display: flex;
     flex-direction: column;
 }
