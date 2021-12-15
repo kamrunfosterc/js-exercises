@@ -16,6 +16,7 @@ body{
     min-height: 100vh;
     background: var(--clr);
 }
+
 /*navigation class*/
 .navigation{
     position: relative;
@@ -61,6 +62,10 @@ body{
 .navigation ul li.active a .icon{
     transform: translateY(-32px);
 }
+
+/*.navigation ul li:hover a .icon{*/
+/*    transform: translateY(-32px);*/
+/*}*/
 .navigation ul li a .text{
     position: absolute;
     color: var(--clr);
@@ -71,6 +76,10 @@ body{
     opacity: 0;
     transform: translateY(20px);
 }
+/*.navigation ul li:hover a .text{*/
+/*    opacity: 1;*/
+/*    transform: translateY(10px);*/
+/*}*/
 .navigation ul li.active a .text{
     opacity: 1;
     transform: translateY(10px);
@@ -88,22 +97,22 @@ body{
 .indicator::before{
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: -22px;
     width: 20px;
     height: 20px;
-    background: #f00;
+    background: transparent;
     border-top-right-radius: 20px;
     box-shadow: -1px -10px 0 0 var(--clr);
 }
 .indicator::after{
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     right: -22px;
     width: 20px;
     height: 20px;
-    background: #f00;
+    background: transparent;
     border-top-left-radius: 20px;
     box-shadow: -1px -10px 0 0 var(--clr);
 }
