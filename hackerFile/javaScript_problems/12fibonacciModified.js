@@ -9,7 +9,13 @@ function fibonacciModified(t1, t2, n){
 
     for (let i = 2; i < n; i++){
         let prev = fib[i-1];
+        let old = fib[i-2];
+
+        fib[i] = old + (prev**2);
+        console.log(fib);
     }
+    let  last = fib[fib.length - 1];
+    return last;
 }
 
 
