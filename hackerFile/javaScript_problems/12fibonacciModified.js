@@ -29,9 +29,16 @@ function fibonacciModified(x, y, n){
         let prev = fib[i-1];
         if (i>=9){
             let math = (old + (prev**2))/(10**3);
-            fib[i] = math.toPrecision(22)
+            fib[i] = math.toPrecision(22);
+            let lastly = fib[fib.length - 1];
+            console.log("fixed tested " + lastly);
+        } else {
+            fib[i] = old + (prev**2);
+            console.log("less than value: " + fib);
         }
     }
+    let last = fib[fib.length - 1];
+    return last + " final answer";
 }
 
 
