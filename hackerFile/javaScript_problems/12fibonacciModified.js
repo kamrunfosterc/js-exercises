@@ -18,6 +18,22 @@ function fibonacciModified(t1, t2, n){
     return last;
 }
 
+// Attempt 2
+function fibonacciModified(x, y, n){
+    let fib = [];
+    fib[0] = x;
+    fib[1] = y;
+    // console.log(fib[0], fib[1]);
+    for (let i=2; i<n; i++){
+        let old = fib[i-2];
+        let prev = fib[i-1];
+        if (i>=9){
+            let math = (old + (prev**2))/(10**3);
+            fib[i] = math.toPrecision(22)
+        }
+    }
+}
+
 
 
 
