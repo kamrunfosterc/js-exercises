@@ -41,6 +41,33 @@ function fibonacciModified(x, y, n){
     return last + " final answer";
 }
 
+//Attempt 3
+function findNthNumber(A , B , N) {
+
+    // To store the current element which
+    // is the sum of previous two
+    // elements of the series
+    var sum = 0;
+
+    // This loop will terminate when
+    // the Nth element is found
+    for (let i = 2; i < N; i++) {
+        sum = A + B**2;
+
+        A = B;
+
+        B = sum;
+    }
+
+    // Return the Nth element
+    return sum;
+} //********* need to check format *********
+
+// Driver code
+
+var A = 5, B = 7, N = 10;
+
+document.write(findNthNumber(A, B, N));
 
 
 
