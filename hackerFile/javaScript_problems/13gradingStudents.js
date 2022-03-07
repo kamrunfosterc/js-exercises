@@ -113,7 +113,6 @@
 
 function gradingStudents(grades) {
 
-    // Write your code here
     // grade less than 40 is failing
     //if difference between grade and next multiple of 5 is less than 3, round
     // grade up to next multiple of 5
@@ -123,8 +122,47 @@ function gradingStudents(grades) {
     //e.g. grade 84 round to 85 (85-84 is less than 3
     //e.g. grade = 57 don't round (60-57 is 3 or higher)
 
-    for (i<0; grades.length < i; i++){
+    // todo :: my solution attempt 1
+    // check that number is 1 or 2 below module 5... solns will have module 3, 4 in our cases
 
+    // for (let i=0; i < grades.length; i++){
+    //     //if, if else statements
+    //     // 1. less than 38 just print grade
+    //     if ((grades[i] >= 38) && ((grades[i]%5) == 3)){
+    //         grades[i] = grades[i] + (5- (grades[i]%5));
+    //         console.log(grades[i]);
+    //     } else if ((grades[i] >= 38) && ((grades[i]%5) == 4)){
+    //         grades[i] = grades[i] + (5- (grades[i]%5));
+    //         console.log(grades[i]);
+    //     } else {
+    //         //grades[i] <= 38
+    //         return grades[i];
+    //     }
+    // }
+
+    // todo :: my solution attempt 2
+    // check that number is 1 or 2 below module 5... solns will have module 3, 4 in our cases
+    for (let i=0; i < grades.length; i++){
+        //if, if else statements
+        // 1. less than 38 just print grade
+        if ((grades[i] >= 38) && (((grades[i]%5) == 3) || ((grades[i]%5) == 4))){
+            grades[i] = grades[i] + (5- (grades[i]%5));
+            console.log(grades[i]);
+        } else {
+            //grades[i] <= 38
+            // return grades;
+        }
     }
+    return grades;
+
+
+    // todo solution found to confirm https://github.com/nlakritz/hackerrank-solutions/blob/master/grading-students.js
+
+        // for (let i=0; i < grades.length; i++){
+        //     if ((grades[i] >= 38) && (((grades[i]%5)==3 ) || ((grades[i]%5)==4))){
+        //         grades[i] = grades[i] + (5- (grades[i] % 5));
+        //          // so grades[i] = 73 + (5-3)... == 75 after grading scale
+        //     }
+        // } return grades;
 
 }
