@@ -122,6 +122,20 @@ function gradingStudents(grades) {
     //e.g. grade 84 round to 85 (85-84 is less than 3
     //e.g. grade = 57 don't round (60-57 is 3 or higher)
 
+    // todo :: my solution attempt 2
+    // check that number is 1 or 2 below module 5... solns will have module 3, 4 in our cases
+    for (let i=0; i < grades.length; i++){
+
+        if ((grades[i] >= 38) && (((grades[i]%5) == 3) || ((grades[i]%5) == 4))){
+            //conditions greater than 37,
+            grades[i] = grades[i] + (5- (grades[i]%5));
+            console.log(grades[i]);
+        } else {
+            //grades[i] <= 38
+            // note nothing is required for else portion
+        }
+    }
+    return grades;
     // todo :: my solution attempt 1
     // check that number is 1 or 2 below module 5... solns will have module 3, 4 in our cases
 
@@ -140,20 +154,7 @@ function gradingStudents(grades) {
     //     }
     // }
 
-    // todo :: my solution attempt 2
-    // check that number is 1 or 2 below module 5... solns will have module 3, 4 in our cases
-    for (let i=0; i < grades.length; i++){
-        //if, if else statements
-        // 1. less than 38 just print grade
-        if ((grades[i] >= 38) && (((grades[i]%5) == 3) || ((grades[i]%5) == 4))){
-            grades[i] = grades[i] + (5- (grades[i]%5));
-            console.log(grades[i]);
-        } else {
-            //grades[i] <= 38
-            // return grades;
-        }
-    }
-    return grades;
+
 
 
     // todo solution found to confirm https://github.com/nlakritz/hackerrank-solutions/blob/master/grading-students.js
