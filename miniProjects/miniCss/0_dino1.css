@@ -33,13 +33,13 @@
 
 /*adding animation to make it seem as though block is moving to character*/
 @keyframes block {
-    0%{left:780px;}
+    0%{left:800px;}
     100%{left:-40px;}
 }
 /*adding animation to make character jump, moves up, pauses, returns*/
 @keyframes jump {
     0%{top: 150px;}
-    30%{top: 100px;}
+    30%{top: 80px;}
     70%{top: 100px;}
     100%{top: 150px;}
 }
