@@ -8,3 +8,39 @@
     height: 200px;
     border: 1px solid black;
 }
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px; /*bc character is 50px need to place down 150px*/
+}
+/*class to animate character*/
+.jumpAnimate{
+    animation: jump 500ms; /*infinite*/
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1s infinite linear;
+}
+
+/*adding animation to make it seem as though block is moving to character*/
+@keyframes block {
+    0%{left:480px;}
+    100%{left:-40px;}
+}
+/*adding animation to make character jump, moves up, pauses, returns*/
+@keyframes jump {
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
