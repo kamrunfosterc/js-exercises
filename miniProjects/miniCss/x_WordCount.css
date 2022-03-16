@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.brdr{
+    border:1px solid red;
+}
 .ui-input-container{
     background-color: #fff;
     padding: 3rem;
