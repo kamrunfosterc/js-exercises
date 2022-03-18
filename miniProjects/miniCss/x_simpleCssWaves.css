@@ -99,3 +99,11 @@ p{
         font-size:24px;
     }
 }
+
+/*Bootstrap*/
+.brdr{
+    border: 1px solid black;
+}
+.rows{
+    border: 1px dotted red;
+}
