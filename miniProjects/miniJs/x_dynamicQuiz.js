@@ -93,6 +93,40 @@
     }
 
     //Creates list of answer choices as radio inputs
+    function createRadios(index){
+        var radioList = $('<ul>');
+        var item;
+        var input = '';
+        for (var i=0; i< questions[index].choices.length; i++){
+            item = $('<li>');
+            input = '<input type="radio" name="answer" value=' + i + '/>';
+            input += questions[index].choices[i];
+            item.append(input);
+            radioList.append(item);
+        }
+        return radioList;
+    }
 
+    //reads user selection and pushes value to an array
+    function choose(){
+        selections[questionCounter] = + $('input[name="answer"]:checked').val();
+    }
+
+    //displays next requested element
+    function displayNext(){
+        quiz.fadeout(function (){
+            $('#question').remove();
+
+            if (questionCounter < questions.length){
+                var nextQuestion = createQuestionElement(questionCounter);
+                quiz.append(nextQuestion).fadeIn();
+                if(!(isNaN(selections[questionCounter]))){
+                    $('input[value='+selections[questionCounter]+']').prop('checked', true;
+                }
+
+                //Controls display of 'prev' button
+            }
+        })
+    }
 
 })
