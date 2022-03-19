@@ -100,10 +100,24 @@ p{
     }
 }
 
-/*Bootstrap*/
+/* Bootstrap */
 .brdr{
     border: 1px solid black;
 }
 .rows{
     border: 1px dotted red;
+}
+.colm{
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+}
+
+.navi ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+li{
+    list-style-type: none;
 }
