@@ -13,13 +13,17 @@
         choices: [72, 99, 108, 134, 156],
         correctAnswer: 0
     }, {
-        question: "What is 1*7?",
-        choices: [4, 5, 6, 7, 8],
-        correctAnswer: 3
+        question: "What is x: 2 x - 4 y = 9",
+        choices: [4, 11, 1/4, 5, 9/2],
+        correctAnswer: 9/2
     }, {
         question: "What is 8*8?",
         choices: [20, 30, 40, 50, 64],
         correctAnswer: 4
+    }, {
+        question: "Solve for x: 5(- 3x - 2) - (x - 3) = -4(4x + 5) + 13",
+        choices: [16, 2, 17, 0, 6],
+        correctAnswer: 0
     }];
 
     var questionCounter = 0; //Tracks question number
